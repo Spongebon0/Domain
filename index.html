@@ -1,4 +1,4 @@
-Put your HTML text here<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -17,22 +17,24 @@ Put your HTML text here<!DOCTYPE html>
             margin: 0;
             font-family: Arial, sans-serif;
             background: linear-gradient(135deg, #3498db, #2ecc71);
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
             text-align: center;
+            padding: 0 20px;
         }
 
         h1 {
-            font-size: 3em;
+            font-size: 5vw; /* Dynamische Schriftgröße für verschiedene Bildschirmgrößen */
             margin-bottom: 0.5em;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 4vw; /* Dynamische Schriftgröße */
+            max-width: 90vw; /* Textinhalt auf schmalen Bildschirmen nicht zu breit machen */
         }
 
         footer {
@@ -40,14 +42,52 @@ Put your HTML text here<!DOCTYPE html>
             bottom: 10px;
             width: 100%;
             text-align: center;
-            font-size: 0.9em;
+            font-size: 2.5vw; /* Dynamische Schriftgröße für das Footer */
             color: rgba(255, 255, 255, 0.8);
         }
 
-        /* Stil für das Logo-Bild */
         .logo {
-            width: 150px; /* Du kannst die Größe anpassen */
-            margin-bottom: 15px; /* Abstand unterhalb des Logos */
+            width: 20vw; /* Dynamische Breite für das Logo */
+            margin-bottom: 20px;
+            max-width: 150px; /* Begrenzung für größere Bildschirme */
+        }
+
+        /* Spezifische Anpassungen für sehr kleine Bildschirme */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 7vw;
+            }
+
+            p {
+                font-size: 5vw;
+            }
+
+            footer {
+                font-size: 3vw;
+            }
+
+            .logo {
+                width: 30vw; /* Logo wird auf kleinen Bildschirmen etwas größer angezeigt */
+            }
+        }
+
+        /* Spezifische Anpassungen für sehr große Bildschirme */
+        @media (min-width: 1200px) {
+            h1 {
+                font-size: 3em;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+
+            footer {
+                font-size: 1em;
+            }
+
+            .logo {
+                width: 150px;
+            }
         }
     </style>
 </head>
