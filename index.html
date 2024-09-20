@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+Put your HTML text here<!DOCTYPE html>
 <html lang="de">
 
 <head>
@@ -19,6 +19,7 @@
             background: linear-gradient(135deg, #3498db, #2ecc71);
             height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: white;
@@ -42,13 +43,23 @@
             font-size: 0.9em;
             color: rgba(255, 255, 255, 0.8);
         }
+
+        /* Stil für das Logo-Bild */
+        .logo {
+            width: 150px; /* Du kannst die Größe anpassen */
+            margin-bottom: 15px; /* Abstand unterhalb des Logos */
+        }
     </style>
 </head>
 
 <body>
     <div>
+        <!-- Logo in der Mitte hinzufügen -->
+        <img src="Logo.png" alt="Logo" class="logo">
+        
         <h1>Willkommen bei der-rettungsingenieur.de</h1>
         <p>Diese Domain wurde registriert.<br>Die Webseite wird bald verfügbar sein.</p>
+        <!-- E-Mail-Adresse anklickbar gemacht -->
         <p>Bei Fragen wenden Sie sich gerne an <a href="mailto:webmaster@der-rettungsingenieur.de" style="color: #ffffff; text-decoration: underline;">webmaster@der-rettungsingenieur.de</a></p>
     </div>
     <footer>
