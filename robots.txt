@@ -1,6 +1,6 @@
-# Standardregel: Suchmaschinen erlaubt
+# Alle Crawler blockieren (kein Indexieren)
 User-agent: *
-Allow: /
+Disallow: /
 
 # --- KI-Training & Scraping-Bots blockieren ---
 
