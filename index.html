@@ -20,75 +20,46 @@
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
             color: white;
             text-align: center;
-            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        body > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box;
         }
 
         h1 {
-            font-size: 5vw; /* Dynamische Schriftgröße für verschiedene Bildschirmgrößen */
+            font-size: clamp(1.5rem, 5vw, 3rem);
             margin-bottom: 0.5em;
         }
 
         p {
-            font-size: 4vw; /* Dynamische Schriftgröße */
-            max-width: 90vw; /* Textinhalt auf schmalen Bildschirmen nicht zu breit machen */
+            font-size: clamp(1rem, 4vw, 1.5rem);
+            max-width: 600px;
         }
 
         footer {
-            position: absolute;
-            bottom: 10px;
             width: 100%;
+            padding: 12px 20px;
             text-align: center;
-            font-size: 2.5vw; /* Dynamische Schriftgröße für das Footer */
+            font-size: clamp(0.75rem, 2vw, 1rem);
             color: rgba(255, 255, 255, 0.8);
+            box-sizing: border-box;
         }
 
         .logo {
-            width: 20vw; /* Dynamische Breite für das Logo */
+            width: clamp(80px, 20vw, 150px);
             margin-bottom: 20px;
-            max-width: 150px; /* Begrenzung für größere Bildschirme */
-            border-radius: 15px; /* Abgerundete Ecken */
-        }
-
-        /* Spezifische Anpassungen für sehr kleine Bildschirme */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 7vw;
-            }
-
-            p {
-                font-size: 5vw;
-            }
-
-            footer {
-                font-size: 3vw;
-            }
-
-            .logo {
-                width: 30vw; /* Logo wird auf kleinen Bildschirmen etwas größer angezeigt */
-            }
-        }
-
-        /* Spezifische Anpassungen für sehr große Bildschirme */
-        @media (min-width: 1200px) {
-            h1 {
-                font-size: 3em;
-            }
-
-            p {
-                font-size: 1.5em;
-            }
-
-            footer {
-                font-size: 1em;
-            }
-
-            .logo {
-                width: 150px;
-            }
+            border-radius: 15px;
         }
     </style>
 </head>
