@@ -24,14 +24,15 @@
         body {
             font-family: 'Poppins', Arial, sans-serif;
             background-color: #0d1117;
-            min-height: 100vh;
+            min-height: 100svh;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
-            overflow: hidden;
+            overflow-x: hidden;
+            overflow-y: auto;
             position: relative;
         }
 
@@ -130,6 +131,14 @@
         a:hover {
             color: #90c8ff;
             text-decoration: underline;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .card, .logo, h1, .divider, p {
+                animation: none;
+                opacity: 1;
+                transform: none;
+            }
         }
 
         footer {
