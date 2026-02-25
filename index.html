@@ -71,9 +71,16 @@
         
         <h1>Willkommen bei der-rettungsingenieur.de</h1>
         <p>Diese Domain wurde registriert.<br>Die Webseite wird bald verfügbar sein.</p>
-        <!-- E-Mail-Adresse anklickbar gemacht -->
-        <p>Bei Fragen wenden Sie sich gerne an <a href="mailto:webmaster@der-rettungsingenieur.de" style="color: #ffffff; text-decoration: underline;">webmaster@der-rettungsingenieur.de</a></p>
+        <p>Bei Fragen wenden Sie sich gerne an <a id="contact-mail" href="#" style="color: #ffffff; text-decoration: underline;">webmaster[at]der-rettungsingenieur.de</a></p>
     </div>
+    <script>
+        (function () {
+            var a = document.getElementById('contact-mail');
+            var e = atob('d2VibWFzdGVyQGRlci1yZXR0dW5nc2luZ2VuaWV1ci5kZQ==');
+            a.href = 'mailto:' + e;
+            a.textContent = e;
+        })();
+    </script>
     <footer>
         © 2026 der-rettungsingenieur.de – Alle Rechte vorbehalten
     </footer>
